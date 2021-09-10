@@ -445,13 +445,16 @@ class MyVector{
         while (temp) {  // this loops until temp is NULL
                         // same as `while(temp != NULL)`
 
-            myfile << temp->data;  // print data from node
+            myfile << temp->data;
+            cout << temp->data;  // print data from node
             if (temp->next) {
                 myfile << ", ";
+                cout << ", ";
             }
             temp = temp->next;  // move to next node
         }
         myfile << endl;
+        cout << endl;
     }
 };
 
@@ -460,6 +463,8 @@ int main(){
 ofstream myfile;
 myfile.open ("test.out");
 int x = 0;
+
+myfile << "2143\n" << "P01\n" << "Aodhan Shaw\n\n\n";
 
 MyVector v1;                        // creating object of class MyVector
 v1.pushFront(18);
@@ -492,6 +497,7 @@ x = v1.popFront();
 v1.print(myfile);
 // [18, 20, 25, 9, 11, 25, 27, 33, 47, 51, 63]
 myfile<<x<<endl;
+cout<<x<<endl;
 // 18
 
 x = v1.popRear();
@@ -500,6 +506,7 @@ x = v1.popRear();
 v1.print(myfile);
 // [18, 20, 25, 9, 11, 25, 27, 33]
 myfile<<x<<endl;
+cout<<x<<endl;
 // 47
 
 //x = v2.popAt(3);
