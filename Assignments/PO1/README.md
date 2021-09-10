@@ -7,14 +7,14 @@ MyVector class utilizes overloaded constructors to create dynamically sized link
 
 |   #   | File            | Description                                        |
 | :---: | --------------- | -------------------------------------------------- |
-|   1   | Main.py         | Main driver of my project that launches game.      |
-|   2   | HelperClass.py  | Helper class that holds movement functions         |
-|   3   | TextureClass.py | Helper class that assists with textures and images |
+|   1   | [main.cpp](https://replit.com/@aodhanshaw/2143-OOP-program-1#main.cpp)        | Main driver of my project that launches game.      |
+|   2   | [input.dat](https://replit.com/@aodhanshaw/2143-OOP-program-1#input.dat)  | input file      |
+|   3   | [rest.out](https://replit.com/@aodhanshaw/2143-OOP-program-1#test.out) | output file |
 
 ### Instructions
 
 
 - Example Command:
-    - `N/A
+    - N/A
 
 
