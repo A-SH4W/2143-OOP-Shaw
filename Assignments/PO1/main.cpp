@@ -374,6 +374,7 @@ class MyVector{
     int popped = tail->data;
     Node* deleteMe = tail;
     tail = tail->prev;
+    tail->next=NULL;
     delete deleteMe;                
     return popped;
     }
