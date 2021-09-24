@@ -1,4 +1,4 @@
-## P01 - Bouncy Balls
+## P01 - MyVector Class
 ### Aodhan SHaw
 ### Description:
 
