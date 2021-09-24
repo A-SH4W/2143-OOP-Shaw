@@ -1,5 +1,5 @@
 ## P02 - MyVector Class (operator overloading)
-### Aodhan SHaw
+### Aodhan Shaw
 ### Description:
 
 MyVector class utilizes overloaded constructors to create dynamically sized linked-list which utilizes operator overloading to 
