@@ -109,6 +109,7 @@ void printArr(int *arr, int size) {
 //  void Push(int x)
 //  friend fstream& operator <<(fstream & os, const MyVector &other)
 //  friend ostream& operator <<(ostream & os, const MyVector &other)
+//  int &operator[](int index)
 //  MyVector operator + (const MyVector& other)
 //  MyVector operator - (const MyVector& other)
 //  MyVector operator * (const MYVector& other)
@@ -281,6 +282,20 @@ int size;
     os << endl;
     return os;
   }
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Public: int &operator[](int index)
+//         
+// Description: overload [] to access the linked list like an array
+//          
+// Params: int index
+//               
+//
+// Returns: int
+//    
+//
+//////////////////////////////////////////////////////////////////////////////
 
   int &operator[](int index){
     node* temp = head;
