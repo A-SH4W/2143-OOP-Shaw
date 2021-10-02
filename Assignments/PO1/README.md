@@ -7,9 +7,9 @@ MyVector class utilizes overloaded constructors to create dynamically sized link
 
 |   #   | File            | Description                                        |
 | :---: | --------------- | -------------------------------------------------- |
-|   1   | [main.cpp](https://replit.com/@aodhanshaw/2143-OOP-program-1#main.cpp)        | Main driver of my project that launches game.      |
-|   2   | [input.dat](https://replit.com/@aodhanshaw/2143-OOP-program-1#input.dat)  | input file      |
-|   3   | [rest.out](https://replit.com/@aodhanshaw/2143-OOP-program-1#test.out) | output file |
+|   1   | [main.cpp](https://github.com/A-SH4W/2143-OOP-Shaw/blob/main/Assignments/PO1/main.cpp)        | Main driver of my project that launches game.      |
+|   2   | [input.dat](https://github.com/A-SH4W/2143-OOP-Shaw/blob/main/Assignments/PO1/input.dat)  | input file      |
+|   3   | [rest.out](https://github.com/A-SH4W/2143-OOP-Shaw/blob/main/Assignments/PO1/test.out) | output file |
 
 ### Instructions
 
