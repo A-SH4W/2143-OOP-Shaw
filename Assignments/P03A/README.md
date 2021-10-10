@@ -9,7 +9,7 @@ rpsls
 |   #   | File            | Description                                        |
 | :---: | --------------- | -------------------------------------------------- |
 |   1   | [main.cpp](https://github.com/A-SH4W/2143-OOP-Shaw/blob/main/Assignments/P03A/main.cpp)| Main driver of my project that launches game.      |
-|   2   | [input.dat]()| input file     |
+|   2   | [header.h](https://github.com/A-SH4W/2143-OOP-Shaw/blob/main/Assignments/P03A/header.h)| Header file     |
 |   3   | [output.txt]()| output file |
 
 ### Instructions
