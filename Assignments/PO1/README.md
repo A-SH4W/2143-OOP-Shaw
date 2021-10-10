@@ -1,5 +1,5 @@
 ## P01 - MyVector Class
-### Aodhan SHaw
+### Aodhan Shaw
 ### Description:
 
 MyVector class utilizes overloaded constructors to create dynamically sized linked-list which can be manipulated by the user. 
