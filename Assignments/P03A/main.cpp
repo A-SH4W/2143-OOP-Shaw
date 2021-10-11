@@ -1,128 +1,101 @@
 
+//////////////////////////////////////////////////////////////////////////////
+//
+// Author:           Aodhan Shaw, Alex Ryan, Blake Gauna, Joshua Beaty
+// Title:            P03A
+// Course:           2143
+// Semester:         Fall 2021
+//
+// Description:
+//    Program that play RPSLS by using a parent class "hands" and child class
+//    "player" to randomly pick the different options of the game 25 times
+//
+//////////////////////////////////////////////////////////////////////////////
+
+
 #include "Hands.H"
-
-using namespace std;
-
-bool compare(Player, Player);
-
-bool operator >(const Player p1, const Player p2) {
-    
-  Player lhs = p1;
-  Player rhs = p2;
-  //weapon 1 logic
-  //Checks to see if rhs wins
-  if ((lhs.weapon1 == ROCK && rhs.weapon1 == PAPER) || (lhs.weapon1 == SPOCK && rhs.weapon1 == PAPER)){
-    return false;
-  }
-
-  else if ((lhs.weapon1 == PAPER && rhs.weapon1 == SCISSORS) || (lhs.weapon1 == LIZARD && rhs.weapon1 == SCISSORS)){
-    return false;
-  }
-  
-  else if ((lhs.weapon1 == LIZARD && rhs.weapon1 == ROCK) || (lhs.weapon1 == SCISSORS && rhs.weapon1 == ROCK)){
-    return false;
-  }
-
-  else if ((lhs.weapon1 == SPOCK && rhs.weapon1 == LIZARD) || (lhs.weapon1 == PAPER && rhs.weapon1 == LIZARD)){
-    return false;
-  }
-
-  else if ((lhs.weapon1 == SCISSORS && rhs.weapon1 == SPOCK) || (lhs.weapon1 == ROCK && rhs.weapon1 == SPOCK)){
-    return false;
-  }
-
-  //Checking to see if lhs wins
-
-  else if ((rhs.weapon1 == ROCK && lhs.weapon1 == PAPER) || (rhs.weapon1 == SPOCK && lhs.weapon1 == PAPER)){
-    return true;
-  }
-
-  else if ((rhs.weapon1 == PAPER && lhs.weapon1 == SCISSORS) || (rhs.weapon1 == LIZARD && lhs.weapon1 == SCISSORS)){
-    return true;
-  }
-  
-  else if ((rhs.weapon1 == LIZARD && lhs.weapon1 == ROCK) || (rhs.weapon1 == SCISSORS && lhs.weapon1 == ROCK)){
-    return true;
-  }
-
-  else if ((rhs.weapon1 == SPOCK && lhs.weapon1 == LIZARD) || (rhs.weapon1 == PAPER && lhs.weapon1 == LIZARD)){
-    return true;
-  }
-
-  else if ((rhs.weapon1 == SCISSORS && lhs.weapon1 == SPOCK) || (rhs.weapon1 == ROCK && lhs.weapon1 == SPOCK)){
-    return true;
-  }
-
-  //weapon 2 logic
-  else if ((lhs.weapon2 == ROCK && rhs.weapon2 == PAPER) || (lhs.weapon2 == SPOCK && rhs.weapon2 == PAPER)){
-    return false;
-  }
-
-  else if ((lhs.weapon2 == PAPER && rhs.weapon2 == SCISSORS) || (lhs.weapon2 == LIZARD && rhs.weapon2 == SCISSORS)){
-    return false;
-  }
-  
-  else if ((lhs.weapon2 == LIZARD && rhs.weapon2 == ROCK) || (lhs.weapon2 == SCISSORS && rhs.weapon2 == ROCK)){
-    return false;
-  }
-
-  else if ((lhs.weapon2 == SPOCK && rhs.weapon2 == LIZARD) || (lhs.weapon2 == PAPER && rhs.weapon2 == LIZARD)){
-    return false;
-  }
-
-  else if ((lhs.weapon2 == SCISSORS && rhs.weapon2 == SPOCK) || (lhs.weapon2 == ROCK && rhs.weapon2 == SPOCK)){
-    return false;
-  }
-
-  //checking for lhs weapon 2
-  else if ((rhs.weapon2 == ROCK && lhs.weapon2 == PAPER) || (rhs.weapon2 == SPOCK && lhs.weapon2 == PAPER)){
-    return true;
-  }
-
-  else if ((rhs.weapon2 == PAPER && lhs.weapon2 == SCISSORS) || (rhs.weapon2 == LIZARD && lhs.weapon2 == SCISSORS)){
-    return true;
-  }
-  
-  else if ((rhs.weapon2 == LIZARD && lhs.weapon1 == ROCK) || (rhs.weapon2 == SCISSORS && lhs.weapon2 == ROCK)){
-    return true;
-  }
-
-  else if ((rhs.weapon2 == SPOCK && lhs.weapon2 == LIZARD) || (rhs.weapon2 == PAPER && lhs.weapon2 == LIZARD)){
-    return true;  
-  }
-
-  else if ((rhs.weapon2 == SCISSORS && lhs.weapon2 == SPOCK) || (rhs.weapon2 == ROCK && lhs.weapon2 == SPOCK)){
-    return true;
-  }
- 
-  
-  return false;
-}
+#include <fstream>
+//prototype for compare
+void compare(Player, Player, ofstream& outfile);
 
 int main() {
+ofstream outfile;
+outfile.open("output.txt");
+
   srand(time(0));
   Hands h;
+  h.heading();
+
+for (int i = 0; i < 30; i++){
   Player p1; 
   Player p2;
-  h.heading();
+  cout << endl;   
+  cout << "    " << "Player 1:" << "             " << "Player 2: " << endl;
   cout << "      " << p1.weapon1 << "                   " << p2.weapon1 << endl;
   cout << "      " << p1.weapon2 << "                   " << p2.weapon2 << endl;
-  return 0;
 
-  if (p1 > p2){
-    cout << "Player 1's " << p1.weapon1 << "defeated Player 2's " << p2.weapon1 << endl;
-  }
-  else if (p2 > p1){
-    cout << "Player 2's " << p2.weapon1 << "defeated Player 1's " << p1.weapon1 << endl;
-  }
-  else 
-  cout << "It was a tie!";
+  outfile << endl;   
+  outfile << "    " << "Player 1:" << "             " << "Player 2: " << endl;
+  outfile << "      " << p1.weapon1 << "                   " << p2.weapon1 << endl;
+  outfile << "      " << p1.weapon2 << "                   " << p2.weapon2 << endl;
 
+  compare(p1, p2, outfile);
 }
 
-bool compare(Player p1, Player p2) {
-  
+  return 0;
+}
 
-  
- return 1; 
+    /**
+     * Public : compare
+     * 
+     * Description:
+     *      compares 2 emojies as if it were a rock, paper, scissors game
+     * 
+     * Params:
+     *      Player    :  p1
+     *      Player    :  p2
+     *      ofstream& :  outfile
+     * 
+     * Returns:
+     *      None
+     */
+void compare(Player p1, Player p2, ofstream& outfile) {
+      //if weapons aren't equal check the comparisons   
+    if(p1.weapon1 != p2.weapon1){
+      //doweapons aren't equal, compare p1 to p2, if p1 wins at all, print out the output.     
+      if(p1>p2){
+        cout << "Player 1's " << p1.weapon1 << " or " << p1.weapon2 << " beats Player 2's " << p2.weapon1 << " or " << p2.weapon2 << '\n';
+        outfile << "Player 1's " << p1.weapon1 << " or " << p1.weapon2 << " beats Player 2's " << p2.weapon1 << " or " << p2.weapon2 << '\n';
+      }
+      else if(p2>p1){
+        cout << "Player 2's " << p2.weapon1 << " or " << p2.weapon2 << " beats Player 1's " << p1.weapon1 << " or " << p1.weapon2 << '\n';
+        outfile << "Player 2's " << p2.weapon1 << " or " << p2.weapon2 << " beats Player 1's " << p1.weapon1 << " or " << p1.weapon2 << '\n';
+      }
+      else {
+        cout << "error, weird case found\n";
+        outfile << "error, weird case found\n";
+      }
+    }
+    else {
+      //they're equal
+      if(p1.weapon2 != p2.weapon2){
+        //2nd weapons not equal declare winner
+        if(p1>p2){
+          cout << "Player 1's " << p1.weapon2 << " beats Player 2's " << p2.weapon2 << '\n';
+          outfile << "Player 1's " << p1.weapon2 << " beats Player 2's " << p2.weapon2 << '\n';
+        }
+        else if(p2>p1){
+          cout << "Player 2's " << p2.weapon2 << " beats Player 1's " << p1.weapon2 << '\n';
+          outfile << "Player 2's " << p2.weapon2 << " beats Player 1's " << p1.weapon2 << '\n';
+        }
+        else{ 
+          cout << "error, weird case found\n";
+          outfile << "error, weird case found\n";
+        }
+      } 
+
+      else
+        cout << "It's a tie!\n";   //they're equal again
+        outfile << "It's a tie!\n";
+    }
 }
