@@ -13,6 +13,38 @@ PW : Primary Weapon = Fists and Feet
 
 using namespace std;
 
+
+/**
+ * class BaseFighter
+ * 
+ * Description:
+ *      Creates a fighter with hands and feet, or has child classes that 
+        can create different characters
+ * 
+ * Public Methods:
+ *    string name
+      Weapon* weapon;
+      Weapon* weapon2;
+      BaseFighter()
+      int getCurrenthp()
+      int getMaxhp()
+      virtual int attack() = 0
+      void takeDamage(int x)
+      bool alive()
+      int getCurrenthp()
+      void heal()
+      void regen()
+      virtual void upgradeWeapon()
+      
+      
+ * 
+ * Private Methods:
+ *      int currenthp
+        int maxhp
+        double regenRate
+        int good Weapon
+ *    
+ */
 class BaseFighter{
 protected:
   int currenthp, maxhp;
@@ -27,7 +59,7 @@ public:
     currenthp = 0;
     regenRate = (rand()%60+15)/100;
     weapon = new Weapon(); //should be fists and feet.
-    goodWeapon = rand()%20;
+    goodWeapon = rand()%20;  //20% chance ONLY defenders get a special weapon
   }
   int getCurrenthp() {
     return currenthp;
@@ -43,10 +75,6 @@ public:
   
   bool alive(){
     return currenthp > 0;
-  }
-
-  int getcurrenthp(){
-    return currenthp;
   }
 
   void heal() {
@@ -65,6 +93,22 @@ public:
   virtual void upgradeWeapon() = 0;
 };
 
+/**
+ * class Wizard
+ * 
+ * Description:
+ *      Creates a wizard with methods from inherited from BaseFighter plus
+        the wizards special tweaks.
+ * 
+ * Public Methods:
+ *    Wizard()
+      int attack()
+      void upgradeWeapon()   
+ * 
+ * Private Methods:
+ *      int dice
+ *    
+ */
 class Wizard: public BaseFighter{
 protected:
   int dice;
@@ -87,6 +131,26 @@ public:
       weapon = new NapalmStaff();
   }
 };
+
+/**
+ * Class Warrior
+ * 
+ * Description:
+ *      This class is for the Warrior type fighter 
+ *     
+ * Public Methods:
+ *     Warrior()
+ *     int attack()
+ *     void upgradeWeapon()
+ *  
+ * 
+ * Private Methods / variables:
+ *      int dice;
+ * 
+ *     
+ *       
+ *      
+ */
 
 class Warrior: public BaseFighter{
 protected:
@@ -112,6 +176,25 @@ public:
   }
   
 };
+
+/**
+ * Class Dragonborn
+ * 
+ * Description:
+ *      This class is for the Dragonborn type fighter 
+ *     
+ * Public Methods:
+ *     Dragonborn()
+ *     int attack()
+ *     void upgradeWeapon()
+ * 
+ * Private Methods / variables:
+ *      int dice;
+ * 
+ *     
+ *       
+ *      
+ */
 
 class Dragonborn: public BaseFighter{
 protected:
@@ -140,6 +223,25 @@ public:
 
 };
 
+/**
+ * Class Archer
+ * 
+ * Description:
+ *      This class is for the Archer type fighter 
+ *     
+ * Public Methods:
+ *     Archer()
+ *     int attack()
+ *     void upgradeWeapon()
+ * 
+ * Private Methods / variables:
+ *      int dice;
+ * 
+ *     
+ *       
+ *      
+ */
+
 class Archer : public BaseFighter{
   protected:
     int dice;
@@ -163,6 +265,26 @@ class Archer : public BaseFighter{
       weapon = new KillerBow();
   }
 };
+
+/**
+ * Class Elf
+ * 
+ * Description:
+ *      This class is for the Elf type fighter 
+ *     
+ * Public Methods:
+ *     Elf()
+ *     int attack()
+ *     void upgradeWeapon()
+ *  
+ * 
+ * Private Methods / variables:
+ *      int dice;
+ * 
+ *     
+ *       
+ *      
+ */
 
 class Elf: public BaseFighter{
 protected:
