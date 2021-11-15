@@ -13,6 +13,7 @@ Program that runs Fight Club
 |   5   | [weapon.hpp](https://github.com/A-SH4W/2143-OOP-Shaw/blob/main/Assignments/P03B/weapon.hpp)| weapon file |
 |   6   | [output.txt](https://github.com/A-SH4W/2143-OOP-Shaw/blob/main/Assignments/P03B/output.txt)| output file |
 |   7   | [input.txt](https://github.com/A-SH4W/2143-OOP-Shaw/blob/main/Assignments/P03B/input.txt)| input file |
+|   8   | [debug.out](https://github.com/A-SH4W/2143-OOP-Shaw/blob/main/Assignments/P03B/debug.out)| debug file |
 ### Instructions
 
 
