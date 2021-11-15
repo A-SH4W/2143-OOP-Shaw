@@ -1,1 +1,9 @@
+warrior 
+wizard 
+wizard
+archer
+warrior
+dragonborn
+elf 
+elf
 
