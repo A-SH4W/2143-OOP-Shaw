@@ -1,9 +1,28 @@
-/*
-*   P03B BolNiverse Fight Club
-*   Joshua Beaty, Alexander Ryan, Aodhan Shaw, Blake Gauna
-*   2143
-*   11/15/2021
-*/
+/*****************************************************************************
+*                    
+*  Author:           Aodhan Shaw, Blake Gauna, Joshua Beaty, Alexander Ryan
+*  Email:            aodhanshaw@gmail.com
+*  Label:            PO3B
+*  Title:            Fight Club
+*  Course:           CMPS 2143
+*  Semester:         Fall 2021
+* 
+*  Description:
+*         This program creates the appropriate number of characters based on the input  and proceeds to manage battles between attackers and defenders choosing the appropriate character to fight based on the above rules. It uses run time polymorphism to switch between attacking characters and defending characters. When the attacking or defending queues become empty, the battle is over and the side with characters remaining wins.
+*        
+*  Usage: 
+*       - Input file if wanted
+*       
+*  Files:            
+*       main.cpp     : driver program 
+        dice.hpp     : rolls die based on which dice
+        fighter.hpp  : file to hold our fighters
+        helpers.hpp  : way to split our string into array indicies
+        weapon.hpp   : file to hold our weapons
+        input        : input file with attackers
+        output       : output file with final stats
+        debug        : debug mode
+*****************************************************************************/
 
 #include <iostream>
 #include <fstream>
