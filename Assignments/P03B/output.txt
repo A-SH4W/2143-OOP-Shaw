@@ -1,1 +1,11 @@
+Defenders Win!
+Final Attack: Defending Archer buried the entire enemy team under a volley of arrows using KILLER BOW!
+Total Numbers of Attackers: 1000
+Total Numbers of Defenders: 50
+Defenders Remaining: 37
+Attackers Remaining: 0
+Number of Rounds Completed: 384
+Attackers killed 13 defenders.
+Defenders killed 1000 attackers.
 
+// This is just an example of potential output
