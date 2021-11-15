@@ -9,6 +9,28 @@ using namespace std;
 
 #pragma once
 
+/**
+ * class Weapon
+ * 
+ * Description:
+ *      This class creates a default fist and feet weapon, or generates
+        a weapon based on random.
+ * 
+ * Public Methods:
+      string name
+      Dice* die
+      bool damageAll
+      string weaponDesc
+      Weapon()
+      Weapon(vector< string > choices)
+      double use()
+      string selectDamage()
+      string getName()
+
+ * 
+ * Private Methods:
+ *      string damage  
+ */
 class Weapon {
 protected:
     string damage;  // damage per roll or "use"
@@ -56,6 +78,17 @@ public:
     }
 };
 
+/**
+ * class Wand : public Weapon
+ * 
+ * Description:
+ *      This class creates a Wand with random damage
+ * 
+ * Public Methods:
+      Wand()
+      string selectDamage()  
+ */
+
 //1.d.20 OR 2.d.10 OR 3.d.6 OR 5.d.4
 class Wand : public Weapon{
   public:
@@ -88,6 +121,17 @@ class Wand : public Weapon{
     }
 };
 
+/**
+ * class NapalmStaff : public Weapon
+ * 
+ * Description:
+ *      This class creates a Napalm Staff with random damage
+ * 
+ * Public Methods:
+      NapalmStaff()
+      string selectDamage()  
+ */
+
 class NapalmStaff : public Weapon{
   public:
     NapalmStaff() {
@@ -102,6 +146,16 @@ class NapalmStaff : public Weapon{
     }
 };
 
+/**
+ * class Sword : public Weapon
+ * 
+ * Description:
+ *      This class creates a Sword with random damage
+ * 
+ * Public Methods:
+      Sword()
+      string selectDamage()  
+ */
 class Sword : public Weapon{
   public:
     Sword() {
@@ -131,6 +185,16 @@ class Sword : public Weapon{
     }
 };
 
+/**
+ * class Excalibur : public Weapon
+ * 
+ * Description:
+ *      This class creates an Excalibur with random damage
+ * 
+ * Public Methods:
+      Excalibur()
+      string selectDamage()  
+ */
 class Excalibur : public Weapon{
   public:
     Excalibur() {
@@ -144,6 +208,16 @@ class Excalibur : public Weapon{
     }
 };
 
+/**
+ * class SneakyKnife : public Weapon
+ * 
+ * Description:
+ *      This class creates a SneakyKnife with random damage
+ * 
+ * Public Methods:
+      SneakyKnife()
+      string selectDamage()  
+ */
 class SneakyKnife : public Weapon{
   public:
     SneakyKnife() {
@@ -173,6 +247,17 @@ class SneakyKnife : public Weapon{
     }
 };
 
+/**
+ * class MehrunesRazor : public Weapon
+ * 
+ * Description:
+ *      This class creates a Mehrunes Razor with random damage
+ * 
+ * Public Methods:
+      MehrunesRazor()
+      string selectDamage()  
+ */
+
 class MehrunesRazor : public Weapon{
   public:
     MehrunesRazor() {
@@ -185,6 +270,17 @@ class MehrunesRazor : public Weapon{
       return "";
     }
 };
+
+/**
+ * class Bow : public Weapon
+ * 
+ * Description:
+ *      This class creates a Bow with random damage
+ * 
+ * Public Methods:
+      Bow()
+      string selectDamage()  
+ */
 
 //1.d.8 OR 2.d.4 OR 1.d.10
 class Bow : public Weapon{
@@ -215,6 +311,21 @@ class Bow : public Weapon{
     }
 };
 
+/**
+ * class KillerBow : public Weapon
+ * 
+ * Description:
+ *  class is used for archer upgraded attack
+ * 
+ * Public Methods:
+ *    KillerBow()
+ *    string selectDamage()   
+ * 
+ * Private Methods:
+ *     
+ *    
+ */
+
 class KillerBow : public Weapon{
   public:
     KillerBow() {
@@ -244,6 +355,21 @@ class KillerBow : public Weapon{
     }
 };
 
+/**
+ * class Breath : public Weapon
+ * 
+ * Description:
+ *  class is used for dragonborn standard attack
+ * 
+ * Public Methods:
+ *    Breath()
+ *    string selectDamage()   
+ * 
+ * Private Methods:
+ *     
+ *    
+ */
+
 class Breath : public Weapon{
   public:
     Breath() {
@@ -267,6 +393,21 @@ class Breath : public Weapon{
       return rtn;
     }
 };
+
+/**
+ * class Shout : public Weapon
+ * 
+ * Description:
+ *  class is used for dragonborn upgraded attack
+ * 
+ * Public Methods:
+ *    Shout()
+ *    string selectDamage()   
+ * 
+ * Private Methods:
+ *      
+ *    
+ */
 
 class Shout : public Weapon{
   public:
@@ -292,6 +433,22 @@ class Shout : public Weapon{
       return rtn;
     }
 };
+
+/**
+ * class Magic : public Weapon
+ * 
+ * Description:
+ *  class is used to add damage to each attacker and defender
+ * 
+ * Public Methods:
+ *    Magic()
+ *    string selectDamage()
+ *  
+ * 
+ * Private Methods:
+ *     
+ *    
+ */
 
 class Magic : public Weapon{
   public:
