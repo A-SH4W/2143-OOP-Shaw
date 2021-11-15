@@ -7,6 +7,22 @@ using namespace std;
 
 #pragma once
 
+
+/**
+ * class Die
+ * 
+ * Description:
+ *      This class creates a dice or gets one passed in
+ * 
+ * Public Methods:
+ *      die()
+        die(int sides)
+        int roll(int rolls)
+ * 
+ * Private Methods:
+ *      int sides
+ *      
+ */
 class Die {
     int sides;
 public:
@@ -24,7 +40,28 @@ public:
     }
 };
 
+/**
+ * class Dice
+ * 
+ * Description:
+ *      This class creates a dice with tokenize,
+        which seperates the string
+ * 
+ * Public Methods:
+ *    Dice()
+      Dice(int n, int s)
+      Dice(string d)
+      void init(int n, int s)
+      int roll(int rolls)
 
+ * 
+ * Private Methods:
+      vector<Die> dice;
+      bool average;
+      bool best;
+      bool constant;
+
+*/
 class Dice {
 private:
     vector< Die > dice;
